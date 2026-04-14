@@ -7,7 +7,7 @@ set -euo pipefail
 # github.com/swayaa/intune-linux
 # =============================================================================
 
-SCRIPT_VERSION="2.0.0"
+SCRIPT_VERSION="2.0.1"
 
 # -----------------------------------------------------------------------------
 # Logging
@@ -58,7 +58,7 @@ need_cmd() {
 }
 
 pkg_installed() {
-  dpkg -s "$1" >/dev/null 2>&1
+  dpkg -l "$1" 2>/dev/null | grep -q "^ii"
 }
 
 pkg_version() {
@@ -163,8 +163,10 @@ cmd_status() {
   step "Intune Agent Timer"
   if systemctl --user is-active --quiet intune-agent.timer 2>/dev/null; then
     log INFO "  ✓ intune-agent.timer läuft"
+  elif systemctl --user is-enabled --quiet intune-agent.timer 2>/dev/null; then
+    log INFO "  ✓ intune-agent.timer eingerichtet (startet beim nächsten Login)"
   else
-    log WARN "  ✗ intune-agent.timer ist nicht aktiv (ggf. noch nicht enrollt)"
+    log WARN "  ✗ intune-agent.timer nicht eingerichtet (ggf. noch nicht enrollt)"
   fi
 
   step "Enrollment / dsreg"
