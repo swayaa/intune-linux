@@ -108,6 +108,7 @@ Wenn eine lokale Edge-DEB in `~/Downloads` liegt (`microsoft-edge-stable_*_amd64
 
 | Version | Änderungen |
 |---|---|
+| v2.0.1 | fix: pkg_installed, timer is-enabled check, daemon-reload false positive, Testsuite (49 Tests) |
 | v2.0.0 | Alle Admin-Modi, interaktives Menü, erweitertes Logging |
 | v1.0.0 | Erstveröffentlichung — Grundinstallation mit Logging |
 
