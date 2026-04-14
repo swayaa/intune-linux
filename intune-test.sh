@@ -316,7 +316,7 @@ echo "" | tee -a "${TEST_LOG}"
 printf "  Vollständiger Log: %s\n\n" "${TEST_LOG}" | tee -a "${TEST_LOG}"
 
 if [[ ${FAIL} -eq 0 ]]; then
-  printf "${C_GREEN}${C_BOLD}  Alle Tests bestanden — bereit für v2.0.1 Tag! 🚀${C_RESET}\n\n" \
+  printf "${C_GREEN}${C_BOLD}  Alle Tests bestanden 🚀${C_RESET}\n\n" \
     | tee -a "${TEST_LOG}"
   exit 0
 else

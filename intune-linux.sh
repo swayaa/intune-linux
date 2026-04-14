@@ -365,7 +365,6 @@ https://packages.microsoft.com/ubuntu/${RELEASE}/prod ${CODENAME} main" \
   step "Repair: Systemd User Daemon Reload"
   if systemctl --user daemon-reload 2>&1 | tee -a "${LOG_FILE}"; then
     log INFO "daemon-reload erfolgreich"
-    ((fixed++)) || true
   fi
 
   step "Repair: Prüfe apt broken packages"
