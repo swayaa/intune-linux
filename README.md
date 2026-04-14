@@ -2,7 +2,7 @@
 
 > Microsoft Intune Bootstrap für Ubuntu/Debian — vollautomatisch, mit Logging und Admin-Modi.
 
-[![Version](https://img.shields.io/badge/version-2.0.0-blue)](https://github.com/swayaa/intune-linux/releases)
+[![Version](https://img.shields.io/badge/version-2.0.1-blue)](https://github.com/swayaa/intune-linux/releases)
 [![Shell](https://img.shields.io/badge/shell-bash-green)](https://github.com/swayaa/intune-linux)
 [![Platform](https://img.shields.io/badge/platform-Ubuntu%2024.04-orange)](https://github.com/swayaa/intune-linux)
 [![License](https://img.shields.io/badge/license-MIT-lightgrey)](LICENSE)
